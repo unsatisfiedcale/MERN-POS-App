@@ -60,31 +60,39 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                   <tr className="border-b border-slate-200">
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-left text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5  text-left text-sm font-normal text-slate-700  md:pl-0 sm:table-cell hidden"
                     >
                       Görsel
                     </th>
                     <th
+                      
                       scope="col"
-                      className="py-3.5 pl-4 text-left text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5  sm:table-cell hidden text-left text-sm font-normal text-slate-700  md:pl-0  "
+                    >
+                      Başlık
+                    </th>
+                    <th
+                    colSpan={4}
+                      scope="col"
+                      className="py-3.5  sm:hidden text-left text-sm font-normal text-slate-700  md:pl-0 "
                     >
                       Başlık
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-left text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5  text-left text-sm font-normal text-slate-700  md:pl-0 sm:table-cell hidden"
                     >
                       Fiyat
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-center text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5  text-center text-sm font-normal text-slate-700  md:pl-0 sm:table-cell hidden"
                     >
                       Adet
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-end text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5  text-end text-sm font-normal text-slate-700  md:pl-0 "
                     >
                       Toplam
                     </th>
@@ -92,20 +100,29 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                 </thead>
                 <tbody>
                   <tr className="border-b border-slate-200">
-                    <td className="py-4 pr-3">
+                    <td className="py-4 pr-3 sm:table-cell hidden">
                       <img
                         src="https://i.lezzet.com.tr/images-xxlarge-secondary/elma-nasil-yenir-221135ca-f383-474c-a4f5-ad02a45db978.jpg"
                         alt=""
                         className="w-12 h-12 object-fill"
                       ></img>
                     </td>
-                    <td className="py-4 pr-3">
+                    <td className="py-4 pr-3 sm:table-cell hidden">
+                      <div className="flex flex-col">
                       <span className="font-medium">Elma</span>
+                      <span className="sm:hidden inline-block text-xs">Birim Fiyatı 5₺</span>
+                      </div>
                     </td>
-                    <td className="py-4 pr-3">
+                    <td colSpan={4} className="py-4 pr-3 sm:hidden ">
+                      <div className="flex flex-col">
+                      <span className="font-medium">Elma</span>
+                      <span className="sm:hidden inline-block text-xs">Birim Fiyatı 5₺</span>
+                      </div>
+                    </td>
+                    <td className="py-4 pr-3  sm:table-cell hidden">
                       <span className="font-medium">5₺</span>
                     </td>
-                    <td className="py-4 pr-3 text-center">
+                    <td className="py-4 pr-3 text-center sm:table-cell hidden">
                       <span className="font-medium">1</span>
                     </td>{" "}
                     <td className="py-4 pr-3 text-end">
@@ -115,28 +132,47 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th className="text-right pt-6" colSpan="4" scope="row">
+                    <th className="text-right pt-4 sm:table-cell hidden" colSpan="4" scope="row">
                       <span className="font-normal text-slate-700">
                         Ara Toplam
                       </span>
                     </th>
-                    <th className="text-right pt-6" colSpan="4" scope="row">
+                    <th className="text-left pt-4 sm:hidden" colSpan="4"  scope="row">
+                      <p className="font-normal text-slate-700">
+                        Ara Toplam
+                      </p>
+                    </th>
+                    <th className="text-right pt-4"  scope="row">
                       <span className="font-normal text-slate-700">53 ₺</span>
                     </th>
                   </tr>
                   <tr>
-                    <th className="text-right pt-6" colSpan="4" scope="row">
-                      <span className="font-normal text-slate-700">KDV</span>
+                  <th className="text-right pt-4 sm:table-cell hidden" colSpan="4" scope="row">
+                      <span className="font-normal text-slate-700">
+                        KDV
+                      </span>
                     </th>
-                    <th className="text-right pt-6" colSpan="4" scope="row">
+                    <th className="text-left pt-4 sm:hidden" colSpan="4"  scope="row">
+                      <p className="font-normal text-slate-700">
+                        KDV
+                      </p>
+                    </th>
+                    <th className="text-right pt-4" colSpan="4" scope="row">
                       <span className="font-normal text-red-700">+4.88</span>
                     </th>
                   </tr>
                   <tr>
-                    <th className="text-right pt-6" colSpan="4" scope="row">
-                      <span className="font-normal text-slate-700">Toplam</span>
+                  <th className="text-right pt-4 sm:table-cell hidden" colSpan="4" scope="row">
+                      <span className="font-normal text-slate-700">
+                        Genel Toplam
+                      </span>
                     </th>
-                    <th className="text-right pt-6" colSpan="4" scope="row">
+                    <th className="text-left pt-4 sm:hidden" colSpan="4"  scope="row">
+                      <p className="font-normal text-slate-700">
+                        Genel Toplam
+                      </p>
+                    </th>
+                    <th className="text-right pt-4" colSpan="4" scope="row">
                       <span className="font-normal text-slate-700">57.88 ₺</span>
                     </th>
                   </tr>
