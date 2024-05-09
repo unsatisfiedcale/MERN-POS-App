@@ -1,5 +1,4 @@
 import Header from "../components/header/Header";
-import CreateBill from "../components/cart/CreateBill";
 import { Table, Card, Button } from "antd";
 import { useState } from "react";
 import PrintBill from "../components/bills/PrintBill";

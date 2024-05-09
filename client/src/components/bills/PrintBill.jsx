@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Modal, Select } from "antd";
+import { Button, Modal } from "antd";
 
 const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
   return (
