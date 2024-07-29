@@ -101,11 +101,13 @@ const StatisticsPage = () => {
           </div>
         </div>
         <div className="flex justify-between gap-10 lg:flex-row flex-col items-center">
-              <div className="lg:w-1/2 lg:h-80 h8h-80">
+          <div className="lg:w-1/2 lg:h-80 h8h-80">
             <LineChart {...lineChartConfig} />
           </div>
 
-          <div className="lg:w-1/2 lg:h-70 h-62">            <PieChart {...pieChartConfig} />
+          <div className="lg:w-1/2 lg:h-70 h-62">
+            {" "} 
+            <PieChart {...pieChartConfig} />
           </div>
         </div>
       </div>
