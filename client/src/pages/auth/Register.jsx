@@ -1,5 +1,6 @@
-import { Button, Form, Input } from "antd";
+import { Carousel,Button, Form, Input } from "antd";
 import {Link} from "react-router-dom";
+import AuthCarousel from "../../components/auth/AuthCarousel";
 import React from "react";
 const Register = () => {
   return (
@@ -58,7 +59,7 @@ const Register = () => {
             </Form.Item>
             <Form.Item
             >
-                <Button type="primary" htmlType="submit" className="w-full" size="large">Kaydol</Button>
+                <Button type="primary" htmlType="submit" className="w-full" size="large">Kayıt Ol</Button>
             </Form.Item>
           </Form>
           <div className="flex justify-center absolute left-0 bottom-10 w-full">
@@ -66,7 +67,34 @@ const Register = () => {
             <Link to="/login" className="text-blue-600">Şimdi giriş yap!</Link>
           </div>
         </div>
-        <div className="xl:w-4/6 min-w-[800px]">Right</div>
+        <div className="xl:w-4/6 lg:w-3/5 md:w-1/2 md:flex hidden bg-[#6c63ff] h-full">
+          <div className="w-full h-full flex items-center">
+            <div className="w-full">
+              <Carousel className="!h-full px-6" autoplay>
+                <AuthCarousel
+                  img="/images/responsive.svg"
+                  title="Responsive"
+                  desc="Tüm Cihaz Boyutlarıyla Uyumluluk"
+                />
+                <AuthCarousel
+                  img="/images/statistic.svg"
+                  title="İstatistikler"
+                  desc="Geniş Tutulan İstatistikler"
+                />
+                <AuthCarousel
+                  img="/images/customer.svg"
+                  title="Müşteri Memnuniyeti"
+                  desc="Deneyim Sonunda Üründen Memnun Müşteriler"
+                />
+                <AuthCarousel
+                  img="/images/admin.svg"
+                  title="Yönetici Paneli"
+                  desc="Tek Yerden Yönetim"
+                />
+              </Carousel>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

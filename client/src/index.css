@@ -6,12 +6,11 @@
 body {
   margin: 0;
   font-family: 'Electrolize', sans-serif;
-  
-  
+  @apply bg-gray-50;
 }
 
 .ant-btn-primary{
-  background-color: #1672ff;
+  background-color: #1571fa;
 }
 
 
