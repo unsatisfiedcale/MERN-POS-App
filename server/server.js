@@ -10,6 +10,7 @@ const categoryRoute = require("./routes/categories.js");
 const productRoute = require("./routes/products.js");
 const billRoute = require("./routes/bills.js");
 const authRoute = require("./routes/auth.js");
+const userRoute = require("./routes/users.js");
 
 dotenv.config();
 
@@ -23,15 +24,16 @@ const connect = async () => {
 };
 
 //middlewares
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
 app.use("/server/categories", categoryRoute);
 app.use("/server/products", productRoute);
 app.use("/server/bills", billRoute);
 app.use("/server/auth", authRoute);
+app.use("/server/users", userRoute);
 
 app.listen(port, () => {
-    connect();
+  connect();
   console.log(`Example app listening on port ${port}`);
 });
