@@ -23,4 +23,13 @@ router.get("/get-product", async (req, res) => {
   }
 });
 
+router.delete("/delete-product", async (req, res) => {
+  try {
+    await Product.findOneAndDelete({ _id: req.body.productId });
+    res.status(200).json("Item deleted successfully.");
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 module.exports = router;
