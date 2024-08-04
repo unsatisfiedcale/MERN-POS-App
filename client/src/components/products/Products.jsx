@@ -26,18 +26,18 @@ const Products = ({ categories }) => {
   }, []);
 
   return (
-    <div className="products-wrapper grid grid-cols-card gap-4">
+    <div className="products-wrapper grid grid-cols-card gap-4 rounded-lg"> {/* rounded-lg ekledik */}
       {products.map((item) => (
         <ProductItem item={item} key={item._id} />
       ))}
 
       <div
-        className="product-item border hover:shadow-lg cursor-pointer transition-all select-none bg-purple-800 flex justify-center items-center hover:opacity-90 min-h-[180px]"
+        className="product-item border hover:shadow-lg cursor-pointer transition-all select-none bg-purple-900 flex justify-center items-center hover:opacity-90 min-h-[180px] rounded-md"
         onClick={() => setIsAddModalOpen(true)}
       >
         <PlusOutlined className="text-white md:text-2xl" />
       </div>
-      <div className="product-item border hover:shadow-lg cursor-pointer transition-all select-none bg-orange-800 flex justify-center items-center hover:opacity-90"
+      <div className="product-item border hover:shadow-lg cursor-pointer transition-all select-none bg-orange-700 flex justify-center items-center hover:opacity-90 min-h-[180px] rounded-md"
       onClick={() => navigate("/products")}
       >
         <EditOutlined className="text-white md:text-2xl" />

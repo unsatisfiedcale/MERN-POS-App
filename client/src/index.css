@@ -13,6 +13,10 @@ body {
   background-color: #1571fa;
 }
 
+.menu-link .anticon {
+  display: flex;
+  justify-content: center;
+}
 
 @media(min-width: 768px) {
   body{
